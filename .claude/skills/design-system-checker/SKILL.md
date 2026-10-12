@@ -44,3 +44,50 @@ Automatically check if your code follows the design system rules defined in http
 ## How to use
 
 **Check a single file:**
+```
+/design-system-checker src/components/Button.tsx
+```
+
+**Check a folder:**
+```
+/design-system-checker src/components/
+```
+
+**Output includes:**
+- ✓ What's correct
+- ✗ What's wrong
+- 🔧 Suggested fixes
+
+## Example
+
+**Input:**
+```tsx
+<button style={{backgroundColor: '#FF0000', height: '44px'}}>
+  Click me
+</button>
+```
+
+**Output:**
+````
+❌ Violation found:
+
+* Background color `#FF0000` should be `#44403C` (Primary)
+* Height 44px should be 48px
+
+✅ Suggested fix:
+```tsx
+<button style={{backgroundColor: '#44403C', height: '48px'}}>
+  Click me
+</button>
+```
+````
+
+## When to use
+- After writing component code
+- Before pushing to GitHub
+- In weekly automation routine
+- When refactoring existing code
+
+---
+
+*Design System Checker v1.0*
