@@ -61,6 +61,41 @@ Automatically check if your code follows the design system rules defined in http
 ✓ Heading MUST be 18px, 600 weight, Inter
 ✗ NEVER use other fonts or weights
 
+## Examples of Violations (What the checker looks for)
+
+### VIOLATION: Wrong button color
+❌ Bad:
+```tsx
+<button style={{backgroundColor: '#FF0000'}}>Click</button>
+```
+
+✅ Good:
+```tsx
+<button style={{backgroundColor: '#44403C'}}>Click</button>
+```
+
+### VIOLATION: Wrong button height
+❌ Bad:
+```tsx
+<button style={{height: '44px'}}>Click</button>
+```
+
+✅ Good:
+```tsx
+<button style={{height: '48px'}}>Click</button>
+```
+
+### VIOLATION: Wrong font size
+❌ Bad:
+```tsx
+<p style={{fontSize: '16px'}}>Body text</p>
+```
+
+✅ Good:
+```tsx
+<p style={{fontSize: '14px'}}>Body text</p>
+```
+
 ## How to use
 
 **Check a single file:**
