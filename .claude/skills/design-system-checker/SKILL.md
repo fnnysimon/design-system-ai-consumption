@@ -15,31 +15,41 @@ Automatically check if your code follows the design system rules defined in http
 3. **Finds violations** (wrong colors, wrong fonts, wrong spacing)
 4. **Suggests fixes** that make code compliant
 
-## Design System Rules (Reference)
+## Design System Validation Rules
 
-### Colors
-- Primary: #44403C
-- Secondary: #ECE8E2
-- Warning: #C2790A
-- Danger: #B3261E
-- Disabled: #CCCCCC
-- Focus: #4A90A4
+### COLOR RULES
+- Primary button MUST use background #44403C with white text #FFFFFF
+- Secondary button MUST use border #44403C with transparent background
+- Warning button MUST use background #C2790A with white text
+- Danger button MUST use background #B3261E with white text
+- Disabled button MUST use background #CCCCCC with opacity 50%
+- Input focus MUST use border #4A90A4 with blue glow shadow
+- Input error MUST use border #B3261E
+- Alert Info MUST use background #4A90A4
+- Alert Success MUST use background #2E7D32
+- Alert Warning MUST use background #C2790A
+- Alert Error MUST use background #B3261E
+- ✗ NEVER use colors outside this palette
 
-### Typography
-- Body: 14px, 400 weight, Inter
-- Heading: 18px, 600 weight, Inter
-- Label: 12px, 600 weight, Inter
+### SIZE RULES
+- Button height MUST be exactly 48px
+- Input height MUST be exactly 40px
+- Card/Modal border-radius MUST be 8px
+- Input border-radius MUST be 6px
+- ✗ NEVER use custom sizes
 
-### Sizing
-- Button height: 48px
-- Input height: 40px
-- Border radius (components): 8px
-- Border radius (inputs): 6px
+### FONT RULES
+- Body text MUST be 14px, 400 weight, Inter
+- Heading MUST be 18px, 600 weight, Inter
+- Label MUST be 12px, 600 weight, Inter
+- Button text MUST be 14px, 600 weight, Inter
+- ✗ NEVER use other fonts or weights
 
-### Spacing
-- Container padding: 16px
-- Component gap: 8px
-- Section margin: 24px
+### SPACING RULES
+- Container padding MUST be 16px
+- Component gap MUST be 8px
+- Section margin MUST be 24px
+- ✗ NEVER use inconsistent spacing
 
 ## Design System Validation Rules
 
