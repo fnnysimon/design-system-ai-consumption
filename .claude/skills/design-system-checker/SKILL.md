@@ -29,7 +29,7 @@ Automatically check if your code follows the design system rules defined in http
 - Alert Success MUST use background #2E7D32
 - Alert Warning MUST use background #C2790A
 - Alert Error MUST use background #B3261E
-- ✗ NEVER use colors outside this palette
+- ✗ NEVER use colors outside this palette: #44403C, #ECE8E2, #C2790A, #B3261E, #CCCCCC, #4A90A4, #FFFFFF, #2E7D32
 
 ### SIZE RULES
 - Button height MUST be exactly 48px
@@ -50,26 +50,6 @@ Automatically check if your code follows the design system rules defined in http
 - Component gap MUST be 8px
 - Section margin MUST be 24px
 - ✗ NEVER use inconsistent spacing
-
-## Design System Validation Rules
-
-### COLOR RULES
-✓ Primary button MUST use #44403C
-✓ Primary button text MUST be white (#FFFFFF)
-✓ Secondary button MUST use border #44403C
-✗ NEVER use colors outside this palette: #44403C, #ECE8E2, #C2790A, #B3261E, #CCCCCC, #4A90A4
-
-### SIZE RULES
-✓ Button height MUST be 48px (not 44px, not 50px)
-✓ Input height MUST be 40px
-✓ Border radius for buttons MUST be 8px
-✓ Border radius for inputs MUST be 6px
-✗ NEVER use custom sizes
-
-### FONT RULES
-✓ Body text MUST be 14px, 400 weight, Inter
-✓ Heading MUST be 18px, 600 weight, Inter
-✗ NEVER use other fonts or weights
 
 ## Examples of Violations (What the checker looks for)
 
@@ -123,29 +103,51 @@ Automatically check if your code follows the design system rules defined in http
 - ✗ What's wrong
 - 🔧 Suggested fixes
 
-## Example
+## Violation Examples
 
-**Input:**
+### VIOLATION: Wrong button color
+❌ Bad:
 ```tsx
-<button style={{backgroundColor: '#FF0000', height: '44px'}}>
-  Click me
-</button>
+<button style={{backgroundColor: '#FF0000'}}>Click</button>
 ```
 
-**Output:**
-````
-❌ Violation found:
-
-* Background color `#FF0000` should be `#44403C` (Primary)
-* Height 44px should be 48px
-
-✅ Suggested fix:
+✅ Good:
 ```tsx
-<button style={{backgroundColor: '#44403C', height: '48px'}}>
-  Click me
-</button>
+<button style={{backgroundColor: '#44403C'}}>Click</button>
 ```
-````
+
+### VIOLATION: Wrong button height
+❌ Bad:
+```tsx
+<button style={{height: '44px'}}>Click</button>
+```
+
+✅ Good:
+```tsx
+<button style={{height: '48px'}}>Click</button>
+```
+
+### VIOLATION: Wrong input border color
+❌ Bad:
+```tsx
+<input style={{border: '1px solid #999999'}} />
+```
+
+✅ Good:
+```tsx
+<input style={{border: '1px solid #CCCCCC'}} />
+```
+
+### VIOLATION: Wrong font size
+❌ Bad:
+```tsx
+<p style={{fontSize: '16px'}}>Body text</p>
+```
+
+✅ Good:
+```tsx
+<p style={{fontSize: '14px'}}>Body text</p>
+```
 
 ## When to use
 - After writing component code
