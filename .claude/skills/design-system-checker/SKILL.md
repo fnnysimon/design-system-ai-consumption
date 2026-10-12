@@ -41,6 +41,26 @@ Automatically check if your code follows the design system rules defined in http
 - Component gap: 8px
 - Section margin: 24px
 
+## Design System Validation Rules
+
+### COLOR RULES
+✓ Primary button MUST use #44403C
+✓ Primary button text MUST be white (#FFFFFF)
+✓ Secondary button MUST use border #44403C
+✗ NEVER use colors outside this palette: #44403C, #ECE8E2, #C2790A, #B3261E, #CCCCCC, #4A90A4
+
+### SIZE RULES
+✓ Button height MUST be 48px (not 44px, not 50px)
+✓ Input height MUST be 40px
+✓ Border radius for buttons MUST be 8px
+✓ Border radius for inputs MUST be 6px
+✗ NEVER use custom sizes
+
+### FONT RULES
+✓ Body text MUST be 14px, 400 weight, Inter
+✓ Heading MUST be 18px, 600 weight, Inter
+✗ NEVER use other fonts or weights
+
 ## How to use
 
 **Check a single file:**
